@@ -38,3 +38,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Hamburger menu functionality
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navLinks = document.getElementById('navLinks');
+
+hamburgerBtn.addEventListener('click', function() {
+    hamburgerBtn.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close menu when a nav link is clicked (on mobile)
+document.querySelectorAll('#navLinks a').forEach(link => {
+    link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+});
