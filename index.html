@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | UI Designer & Developer</title>
+    <title>Welcome!!</title>
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon"> <!-- Favicon -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -11,7 +12,7 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="2x2Photo1.png" alt="Profile" class="logo-img">
+                <img src="2x2Photo1.png" alt="Profile" class="logo-img" class="project-img" onclick="openModal(this)">
                 <div class="logo-text">
                     <h1>Roescen Abie S. Pajaro</h1>
                     <p>UI Designer & Web Developer</p>
@@ -45,8 +46,7 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>I'm a UI designer and web developer with experience in creating digital interfaces that users love. My journey in tech has led me to explore various domains including machine learning and AI development.</p>
-                    <p>I'm particularly interested in how artificial intelligence can enhance digital art and create new forms of interaction. I've experimented with computer vision techniques to enable gesture-based interfaces where users can paint or draw virtually without touching a screen.</p>
-                    <p>So far, I've completed over 20 projects across different domains, each teaching me something new about design and development.</p>
+                    <p>I've completed over 10 projects across different domains, each teaching me something new about design and development.</p>
                 </div>
             </div>
         </div>
@@ -62,7 +62,7 @@
                     <h3>Frontend</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>React</span>
+                            <span>React</span> 
                             <span>★★★</span>
                         </div>
                         <div class="skill-bar">
@@ -191,6 +191,7 @@
         </div>
     </section>
 
+
     <section id="projects">
         <div class="container">
 
@@ -236,10 +237,37 @@
                     <img src="public/Screenshot 2025-07-22 202038.png" alt="Project 2" class="project-img" onclick="openModal(this)">
                     <div class="project-info">
                         <h3>ESS Scheduler</h3>
-                        <p></p>
+                        <p>A web-based scheduling system to help businesses (or personal use) manage shifts, track availability, and automate scheduling</p>
                         <div class="project-links">
                             <a href="https://github.com/teamCodeblitz/project2.git"><i class="fab fa-github"></i> Code</a>
                             <a href="https://teamcodeblitz.github.io/project2/login?fbclid=IwY2xjawLsX7JleHRuA2FlbQIxMQABHlQJSWgodIdbR71IA7zDy8JverdAaxduIbkGMX0q03_zcUiOv7Lfde52lLgO_aem_rSs_Qa2-NUo-9yUBptvMdQ"><i class="fa fa-globe"></i>Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="public/Screenshot 2025-07-09 111526.png" alt="Project 2" class="project-img" onclick="openModal(this)">
+                    <div class="project-info">
+                        <h3>Beyond The Brush</h3>
+                        <p>Beyond the Hand is a hand gesture-based digital painting application. Basically, you control the app just by moving your hands in front of a camera</p>
+                        <div class="project-links">
+                            <a href="https://github.com/RoescenAbiePajaro/BTBstreamapp"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://roescenabiepajaro.github.io/beyondDbrush/"><i class="fa fa-globe"></i>Visit Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="public/e2987297-2605-462b-b93d-9b9941c4f41f.jpg" alt="Project 2" class="project-img" onclick="openModal(this)">
+                    <div class="project-info">
+                        <h3>CivicView</h3>
+                        <p>CivicView is a Interactive Digital Information Portal aims to provide
+real-time, user-friendly access to public information through a digital display. The
+system reduces dependency on manual inquiries, improves accessibility, and
+enhances efficiency by displaying updates,announcements, guidelines, and
+interactive information relevant to various public information topics.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Longos26/CivicView---The-Digital-Interactive-Portal"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -284,7 +312,7 @@ The Tealerin Milktea POS System is a comprehensive solution designed to streamli
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> Roescen Abie S. Pajaro. All rights reserved.</p>
         </div>
     </footer>
 
