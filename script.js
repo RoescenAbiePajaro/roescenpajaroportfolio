@@ -1,3 +1,5 @@
+// script.js
+
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -39,21 +41,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Hamburger menu functionality
+// Hamburger menu toggle
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const navLinks = document.getElementById('navLinks');
+const overlay = document.getElementById('mobileNavOverlay');
+
+function closeMenu() {
+    navLinks.classList.remove('active');
+    hamburgerBtn.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+}
 
 hamburgerBtn.addEventListener('click', function() {
+    const isActive = navLinks.classList.toggle('active');
     hamburgerBtn.classList.toggle('active');
-    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.classList.toggle('menu-open', isActive);
 });
 
-// Close menu when a nav link is clicked (on mobile)
-document.querySelectorAll('#navLinks a').forEach(link => {
-    link.addEventListener('click', function() {
-        if (window.innerWidth <= 768) {
-            hamburgerBtn.classList.remove('active');
-            navLinks.classList.remove('active');
-        }
-    });
+overlay.addEventListener('click', closeMenu);
+
+// Optional: close menu on nav link click (mobile)
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
 });
