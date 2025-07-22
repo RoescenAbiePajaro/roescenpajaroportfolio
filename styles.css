@@ -1,3 +1,4 @@
+
 :root {
     --dark-bg: #121212;
     --darker-bg: #0a0a0a;
@@ -37,7 +38,7 @@ body {
 
 header {
     background-color: var(--darker-bg);
-    padding: 20px 0;
+    padding: 8px 0; /* Reduced padding for thinner header */
     position: fixed;
     width: 100%;
     top: 0;
@@ -49,6 +50,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 40px; /* Ensure header stays thin */
+    padding: 0 8px;
+    gap: 8px;
 }
 
 .logo {
@@ -58,15 +62,15 @@ header {
 }
 
 .logo-img {
-    width: 50px;
-    height: 50px;
+    width: 36px; /* Reduced size for thinner header */
+    height: 36px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--accent-green);
 }
 
 .logo-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.1rem; /* Smaller font for thinner header */
     background: linear-gradient(90deg, var(--accent-green), var(--accent-green-dark));
     -webkit-background-clip: text;
     background-clip: text;
@@ -75,14 +79,14 @@ header {
 }
 
 .logo-text p {
-    font-size: 0.8rem;
+    font-size: 0.7rem; /* Slightly smaller */
     color: var(--light-text);
     opacity: 0.8;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 18px; /* Slightly reduced gap */
 }
 
 .nav-links a {
@@ -451,8 +455,9 @@ footer p {
         padding: 0 8px;
     }
     .header-container {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
     .nav-links {
         margin-top: 15px;
@@ -465,7 +470,7 @@ footer p {
     }
     .hero-btns {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
     }
     .about-content {
         flex-direction: column;
@@ -571,20 +576,20 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     background: none;
     border: none;
     cursor: pointer;
     z-index: 1100;
 }
 .hamburger .bar {
-    width: 28px;
-    height: 3px;
+    width: 22px;
+    height: 2px;
     background: var(--accent-green);
-    margin: 4px 0;
+    margin: 3px 0;
     border-radius: 2px;
-    transition: 0.4s;
+    transition: transform 0.4s, opacity 0.3s;
 }
 
 @media (max-width: 768px) {
@@ -592,43 +597,58 @@ footer p {
         display: flex;
     }
     .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        left: 0;
+        position: fixed;
+        top: 0;
+        right: -100vw; /* Hide off-canvas */
+        width: 70vw;
+        max-width: 320px;
+        height: 100vh;
         background: var(--card-bg);
         flex-direction: column;
         gap: 0;
-        width: 100vw;
-        border-radius: 0 0 8px 8px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-        overflow: hidden;
-        transition: max-height 0.3s ease, opacity 0.2s;
-        max-height: 0;
-        opacity: 0;
+        border-radius: 0 0 0 8px;
+        box-shadow: -4px 0 24px rgba(0,0,0,0.2);
+        overflow-y: auto;
+        transition: right 0.3s cubic-bezier(.77,0,.18,1), opacity 0.2s;
+        opacity: 1;
         pointer-events: none;
         z-index: 999;
     }
     .nav-links.active {
-        max-height: 400px;
-        opacity: 1;
+        right: 0;
         pointer-events: auto;
+        opacity: 1;
     }
     .nav-links a {
-        padding: 16px 24px;
+        padding: 20px 32px;
         border-bottom: 1px solid rgba(0,255,136,0.08);
         width: 100%;
         text-align: left;
+    }
+    body.menu-open {
+        overflow: hidden;
     }
 }
 
 /* Hamburger animation when active */
 .hamburger.active .bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
 }
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
 .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Overlay for mobile nav */
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+}
+.mobile-nav-overlay.active {
+    display: block;
 }

@@ -45,24 +45,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const navLinks = document.getElementById('navLinks');
 const overlay = document.getElementById('mobileNavOverlay');
+const backBtn = document.getElementById('backBtn');
 
 function closeMenu() {
     navLinks.classList.remove('active');
     hamburgerBtn.classList.remove('active');
-    overlay.classList.remove('active');
+    if (overlay) overlay.classList.remove('active');
     document.body.classList.remove('menu-open');
 }
 
 hamburgerBtn.addEventListener('click', function() {
     const isActive = navLinks.classList.toggle('active');
     hamburgerBtn.classList.toggle('active');
-    overlay.classList.toggle('active');
+    if (overlay) overlay.classList.toggle('active');
     document.body.classList.toggle('menu-open', isActive);
 });
 
-overlay.addEventListener('click', closeMenu);
+if (overlay) overlay.addEventListener('click', closeMenu);
 
 // Optional: close menu on nav link click (mobile)
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
 });
+
+// Back button logic
+function handleBackBtnDisplay() {
+    if (window.innerWidth <= 768) {
+        backBtn.style.display = 'block';
+    } else {
+        backBtn.style.display = 'none';
+    }
+}
+if (backBtn) {
+    handleBackBtnDisplay();
+    window.addEventListener('resize', handleBackBtnDisplay);
+    backBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.history.back();
+    });
+}
