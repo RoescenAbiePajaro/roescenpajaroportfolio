@@ -20,7 +20,7 @@ body {
     background-color: var(--dark-bg);
     color: var(--light-text);
     line-height: 1.6;
-    padding-top: 90px; /* Adjust based on header height */
+    padding-top: 50px; /* Adjust based on header height */
 }
 
 .container {
@@ -463,7 +463,7 @@ footer p {
         margin-top: 15px;
     }
     .hero {
-        padding: 120px 0 80px;
+        padding: 10px 0 80px;
     }
     .hero h2 {
         font-size: 2rem;
