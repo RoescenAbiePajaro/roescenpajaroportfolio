@@ -1,345 +1,287 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!!</title>
-    <link rel="icon" href="public/favicon.ico" type="image/x-icon"> <!-- Favicon -->
+    <title>Roescen - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="2x2Photo1.png" alt="Profile" class="logo-img" class="project-img" onclick="openModal(this)">
-                <div class="logo-text">
-                    <h1>Roescen Abie S. Pajaro</h1>
-                    <p>UI Designer & Web Developer</p>
-                </div>
-            </div>
-            <nav class="nav-links" id="navLinks">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+        <div class="container">
+            <div class="logo">Roescen</div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
-            
-            <button class="hamburger" id="hamburgerBtn" aria-label="Open navigation menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
     </header>
 
-    
-
-    <section class="hero">
-        <div class="container hero-card">
-            <div class="hero-photo" style="display: flex; justify-content: center; margin-top: 40px; margin-bottom: 20px;">
-                <img src="2x2Photo1.png" alt="My Photo" style="width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid var(--accent-green); box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
-            </div>
-            <div style="text-align: center; margin-bottom: 10px;">
-                <h2 style="font-size: 2rem; color: var(--accent-green); font-weight: 700;">Hello, I'm Roescen</h2>
-                <p>I will utilize my skills, knowledge, and passion to make a meaningful contribution in a dynamic and challenging environment.</p>
-            </div>
-        </div>
+    <!-- Home Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <h2>Creating Digital Experiences That Matter</h2>
-            <p>I design and build user interfaces that are not just visually appealing but also intuitive and functional. My passion lies in blending technology with creative design to solve real-world problems.</p>
-            <div class="hero-btns">
-                <a href="#contact" class="btn btn-primary">Contact Me</a>
-                <a href="#" class="btn btn-outline" id="resumeBtn">View Resume</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a UI designer and web developer with experience in creating digital interfaces that users love. My journey in tech has led me to explore various domains including machine learning and AI development.</p>
-                    <p>I've completed over 10 projects across different domains, each teaching me something new about design and development.</p>
+            <div class="hero-content">
+                <div class="profile-img">
+                    <img src="https://picsum.photos/seed/roescen/200/200.jpg" alt="Roescen Profile">
+                </div>
+                <h1>Hello, I'm <span class="gradient-text">Roescen</span></h1>
+                <p class="subtitle">I will utilize my skills, knowledge, and passion to make a meaningful contribution in a dynamic and challenging environment.</p>
+                <h2>Creating Digital Experiences That Matter</h2>
+                <p>I design and build user interfaces that are not just visually appealing but also intuitive and functional. My passion lies in blending technology with creative design to solve real-world problems.</p>
+                <div class="btn-group">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#" class="btn btn-secondary">View Resume</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="section-title">
-                <h2>My Skills</h2>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm a UI designer and web developer with experience in creating digital interfaces that users love. My journey in tech has led me to explore various domains including machine learning and AI development.</p>
+                <p>I've completed over 10 projects across different domains, each teaching me something new about design and development.</p>
             </div>
-            <div class="skills">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Frontend</h3>
                     <div class="skill-item">
-                        <div class="skill-name">
-                            <span>React</span> 
-                            <span>★★★</span>
+                        <div class="skill-info">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fab fa-angular"></i>
                             <span>Angular</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fas fa-fire"></i>
                             <span>Svelte</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fas fa-code"></i>
                             <span>Next.js</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                 </div>
+                
                 <div class="skill-category">
                     <h3>Backend & Databases</h3>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fas fa-database"></i>
                             <span>MongoDB</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fas fa-fire-alt"></i>
                             <span>Firebase</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fas fa-database"></i>
                             <span>MySQL</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                 </div>
+                
                 <div class="skill-category">
                     <h3>Design & Styling</h3>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fab fa-html5"></i>
                             <span>HTML/CSS</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fas fa-paint-brush"></i>
                             <span>Tailwind CSS</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fas fa-pencil-ruler"></i>
                             <span>UI/UX (Figma)</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                 </div>
+                
                 <div class="skill-category">
                     <h3>Programming</h3>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fab fa-js-square"></i>
                             <span>JavaScript</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fas fa-code"></i>
                             <span>TypeScript</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-name">
+                        <div class="skill-info">
+                            <i class="fab fa-node-js"></i>
                             <span>Node.js</span>
-                            <span>★★★</span>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
-                        </div>
+                        <div class="skill-rating">★★★</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://picsum.photos/seed/project1/400/300.jpg" alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>A brief description of this amazing project and the technologies used.</p>
+                    <div class="project-links">
+                        <a href="https://example.com/project1" target="_blank" class="btn-icon btn-primary" title="View Site">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="https://github.com/roescen/project1" target="_blank" class="btn-icon btn-outline" title="View Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://picsum.photos/seed/project2/400/300.jpg" alt="Project 2">
+                </div>
+                <div class="project-info">
+                    <h3>Project Two</h3>
+                    <p>A brief description of this amazing project and the technologies used.</p>
+                    <div class="project-links">
+                        <a href="https://example.com/project2" target="_blank" class="btn-icon btn-primary" title="View Site">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="https://github.com/roescen/project2" target="_blank" class="btn-icon btn-outline" title="View Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://picsum.photos/seed/project3/400/300.jpg" alt="Project 3">
+                </div>
+                <div class="project-info">
+                    <h3>Project Three</h3>
+                    <p>A brief description of this amazing project and the technologies used.</p>
+                    <div class="project-links">
+                        <a href="https://example.com/project3" target="_blank" class="btn-icon btn-primary" title="View Site">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="https://github.com/roescen/project3" target="_blank" class="btn-icon btn-outline" title="View Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section id="projects">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-
-            <div class="section-title">
-                <h2>Featured Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="public/login.png" alt="Project 1" class="project-img" onclick="openModal(this)">
-                    <div class="project-info">
-                        <h3>PractiPro</h3>
-                        <p>PractiPro,is a Online Practicum Submission website, is a cutting-edge solution designed to revolutionize the way students submit their practicum requirements</p>
-                        <div class="project-links">
-                            <a href="https://github.com/dummassdenzel/PractiPro.git"><i class="fab fa-github"></i> Code</a>
-                        </div>
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@roescen.com">contact@roescen.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/roescen" target="_blank">github.com/roescen</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/roescen" target="_blank">linkedin.com/in/roescen</a>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <img src="public/ESHOPPPRO.png" alt="Project 2" class="project-img" onclick="openModal(this)">
-                    <div class="project-info">
-                        <h3>Eshopp</h3>
-                        <p>A e-commerce interface with focus on user experience and intuitive navigation.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/RoescenAbiePajaro/eshop"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="public/d36b54a3-11db-43bf-8a21-3dba9af38264.jpg" alt="Project 2" class="project-img" onclick="openModal(this)">
-                    <div class="project-info">
-                        <h3>Svelte Screen</h3>
-                        <p>Svelte Screen is a mini web application built for movie enthusiasts to discover, explore, and engage with films.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/RoescenAbiePajaro/svelteScreen"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://roescenabiepajaro.github.io/svelteScreen/"><i class="fa fa-globe"></i>Visit Site</a>
-                        </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="public/Screenshot 2025-07-22 202038.png" alt="Project 2" class="project-img" onclick="openModal(this)">
-                    <div class="project-info">
-                        <h3>ESS Scheduler</h3>
-                        <p>A web-based scheduling system to help businesses (or personal use) manage shifts, track availability, and automate scheduling</p>
-                        <div class="project-links">
-                            <a href="https://github.com/teamCodeblitz/project2.git"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://teamcodeblitz.github.io/project2/login?fbclid=IwY2xjawLsX7JleHRuA2FlbQIxMQABHlQJSWgodIdbR71IA7zDy8JverdAaxduIbkGMX0q03_zcUiOv7Lfde52lLgO_aem_rSs_Qa2-NUo-9yUBptvMdQ"><i class="fa fa-globe"></i>Visit Site</a>
-                        </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="public/Screenshot 2025-07-09 111526.png" alt="Project 2" class="project-img" onclick="openModal(this)">
-                    <div class="project-info">
-                        <h3>Beyond The Brush</h3>
-                        <p>Beyond the Hand is a hand gesture-based digital painting application. Basically, you control the app just by moving your hands in front of a camera</p>
-                        <div class="project-links">
-                            <a href="https://github.com/RoescenAbiePajaro/BTBstreamapp"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://roescenabiepajaro.github.io/beyondDbrush/"><i class="fa fa-globe"></i>Visit Site</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="public/e2987297-2605-462b-b93d-9b9941c4f41f.jpg" alt="Project 2" class="project-img" onclick="openModal(this)">
-                    <div class="project-info">
-                        <h3>CivicView</h3>
-                        <p>CivicView is a Interactive Digital Information Portal aims to provide
-real-time, user-friendly access to public information through a digital display. The
-system reduces dependency on manual inquiries, improves accessibility, and
-enhances efficiency by displaying updates,announcements, guidelines, and
-interactive information relevant to various public information topics.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/Longos26/CivicView---The-Digital-Interactive-Portal"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <img src="public/465750477_1012955193991956_5039972059010225916_n.jpg" alt="Project 3" class="project-img" onclick="openModal(this)">
-                    <div class="project-info">
-                        <h3>Tealerin</h3>
-                        <p>
-The Tealerin Milktea POS System is a comprehensive solution designed to streamline and manage the operations of a snack bar specializing in milk tea and snack items</p>
-                        <div class="project-links">
-                            <a href="https://github.com/RoescenAbiePajaro/codebrewrepo"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Let's Connect</h2>
-            </div>
-            <div class="contact-links">
-                <a href="https://gmail.com/abiepajaro@gmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-                <a href="https://github.com/RoescenAbiePajaro" target="_blank" class="contact-link">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://www.facebook.com/pajaroabie" target="_blank" class="contact-link">
-                    <i class="fab fa-facebook"></i> Facebook
-                </a>
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; <span id="year"></span> Roescen Abie S. Pajaro. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">Roescen</div>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Roescen. All rights reserved.</p>
+            </div>
         </div>
     </footer>
-
-    <!-- Image Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
 
     <script src="script.js"></script>
 </body>
