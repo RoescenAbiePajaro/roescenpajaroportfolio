@@ -28,8 +28,15 @@ body {
     padding: 0 20px;
 }
 
+.containers {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
 section {
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .gradient-text {
@@ -220,8 +227,9 @@ header {
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    gap: 40px;
+    margin-top: 90px;
+    margin-bottom: 140px;
 }
 
 .skill-category {
@@ -273,6 +281,7 @@ header {
     transition: all 0.3s ease;
     position: relative;
     border: 1px solid rgba(0, 200, 81, 0.1);
+    margin-bottom: 20px;
 }
 
 .project-card:hover {
@@ -350,6 +359,7 @@ header {
 .project-links a:hover::before {
     width: 100%;
 }
+
 
 /* Contact Section */
 .contact {
@@ -465,6 +475,7 @@ footer {
     }
     
     .about-image {
+        width: 100%;
         margin-bottom: 30px;
     }
     
